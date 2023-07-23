@@ -1,5 +1,3 @@
-from time import sleep
-
 #config
 INPUT_FILE_NAME = "tlou1.map"
 OUTPUT_FILE_NAME = "tlou1_nostart.map"
@@ -121,7 +119,7 @@ def generate_output():
     fin = open(INPUT_FILE_NAME, "r")
     lines = fin.readlines()
     fin.close()
-    
+
     fout = open(OUTPUT_FILE_NAME, "w")
     for line in lines:
         if line.startswith("#terrain"): # replace original terrain command with generated one
