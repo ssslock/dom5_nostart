@@ -49,8 +49,8 @@ def read_flag(splited_line):
         flag = int(splited_line[2])
         province_flag[province] = flag
         neighbor_counts[province] = 0
-        province_uw[province] = bool(flag & (SEA_BIT | DEEP_SEA_BIT)) # either sea or deep sea
-        province_cave[province] = bool(flag & CAVE_BIT) # either sea or deep sea
+        province_uw[province] = bool(flag & (SEA_BIT | DEEP_SEA_BIT))   # either sea or deep sea
+        province_cave[province] = bool(flag & CAVE_BIT)                 # cave
         province_uw_neighbor[province] = False
         province_land_neighbor[province] = False
 
