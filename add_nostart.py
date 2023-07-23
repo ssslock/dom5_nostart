@@ -122,9 +122,6 @@ def generate_output():
     lines = fin.readlines()
     fin.close()
     
-    # if INPUT_FILE_NAME == OUTPUT_FILE_NAME:
-    #     sleep(1)
-
     fout = open(OUTPUT_FILE_NAME, "w")
     for line in lines:
         if line.startswith("#terrain"): # replace original terrain command with generated one
