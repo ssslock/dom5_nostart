@@ -16,3 +16,4 @@ These provinces will be modified with the flag:
 5. Other provinces with 3- neighbors.
 
 Note that UW - land connections and impassible connections are not count as neighbors.
+Also note that the script only add onstart flags for the above provinces and will not remove any existing nostart flag nor add any start flag.
