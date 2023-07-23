@@ -9,10 +9,10 @@ To Use:
 4. python add_nostart.py
 
 These provinces will be modified with the flag:
-Provinces with 7+ neighbors.
-Cave provinces with 2- neighbors.
-Coast provinces with 2- neighbors.
-UW provinces with an adjacent land province and with 2- neighbors.
-Other provinces with 3- neighbors.
+1. Provinces with 7+ neighbors.
+2. Cave provinces with 2- neighbors.
+3. Coast provinces with 2- neighbors.
+4. UW provinces with an adjacent land province and with 2- neighbors.
+5. Other provinces with 3- neighbors.
 
 Note that UW - land connections and impassible connections are not count as neighbors.
