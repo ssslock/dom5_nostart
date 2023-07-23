@@ -1,3 +1,5 @@
+from time import sleep
+
 #config
 INPUT_FILE_NAME = "tlou1.map"
 OUTPUT_FILE_NAME = "tlou1_nostart.map"
@@ -117,11 +119,14 @@ def mark_nostart():
 
 def generate_output():
     fin = open(INPUT_FILE_NAME, "r")
+    lines = fin.readlines()
+    fin.close()
+    
+    # if INPUT_FILE_NAME == OUTPUT_FILE_NAME:
+    #     sleep(1)
+
     fout = open(OUTPUT_FILE_NAME, "w")
-    while True:
-        line = fin.readline()
-        if len(line) == 0:              # EOF
-            break
+    for line in lines:
         if line.startswith("#terrain"): # replace original terrain command with generated one
             line = line.rstrip()        # remove \n
             splited_line = line.split(" ")
@@ -130,7 +135,6 @@ def generate_output():
             fout.write(" ".join(splited_line))
         else:                           # copy line from the input file
             fout.write(line)
-    fin.close()
     fout.close()
 
 
