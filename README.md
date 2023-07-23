@@ -1,6 +1,7 @@
 # dom5_nostart
 
 This script add nostart flags for provinces in a dom5 map.
+
 To Use:
 1. Install python 3
 2. Put the script at the same folder of the map file
