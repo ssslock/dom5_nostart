@@ -72,7 +72,7 @@ def read_neighbor(splited_line):
     else:
         if splited_line[0] == "#neighbourspec":
             flag = int(splited_line[3])
-            if flag & IMPASSIBLE_BIT: # check impassible
+            if flag & IMPASSIBLE_BIT:           # check impassible
                 province1 = splited_line[1]
                 province2 = splited_line[2]
                 if province_uw[province1] == province_uw[province2]:
@@ -101,8 +101,6 @@ def check_nostart(province):
     
     return False
 
-    
-
 def mark_nostart():
     start_count = 0
     nostart_count = 0
@@ -122,22 +120,21 @@ def generate_output():
     fout = open(OUTPUT_FILE_NAME, "w")
     while True:
         line = fin.readline()
-        if len(line) == 0:      # EOF
+        if len(line) == 0:              # EOF
             break
         if line.startswith("#terrain"): # replace original terrain command with generated one
-            line = line.rstrip()    # remove \n
+            line = line.rstrip()        # remove \n
             splited_line = line.split(" ")
             province = splited_line[1]
             splited_line[2] = str(province_flag[province]) + "\n"
             fout.write(" ".join(splited_line))
-        else:   # copy line
+        else:                           # copy line from the input file
             fout.write(line)
     fin.close()
     fout.close()
 
 
 def main():
-    print("main")
     read_file()
     mark_nostart()
     generate_output()
