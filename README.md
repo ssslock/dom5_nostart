@@ -8,7 +8,7 @@ To Use:
 3. Adjust configurations at the top of the script
 4. python add_nostart.py
 
-These provinces will be modified with the flag:
+These provinces will be modified with the flag by default:
 1. Provinces with 7+ neighbors.
 2. Cave provinces with 2- neighbors.
 3. Coast provinces with 2- neighbors.
